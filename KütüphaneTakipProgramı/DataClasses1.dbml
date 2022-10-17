@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KutuphaneOtomasyon" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-G8IS3SP\\SQLEXPRESS;Initial Catalog=KutuphaneOtomasyon;Integrated Security=True; Pooling=False" SettingsObjectName="KütüphaneTakipProgramı.Properties.Settings" SettingsPropertyName="KütüphaneConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EMANETDURUM" Member="EMANETDURUMs">
+    <Type Name="EMANETDURUM">
+      <Column Name="Kayıtno" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ÜyeNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ÜyeAdı" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="BarkodNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KitapAdı" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Durum" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Alıştarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Veriştarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KİTAP" Member="KİTAPs"> 
+    <Type Name="KİTAP">
+      <Column Name="BarkodNo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KitapAdı" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Yazarı" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="YayınEvi" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="SayfaSayısı" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StokSayısı" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BasımYılı" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Durum" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KULLANICI" Member="KULLANICIs">
+    <Type Name="KULLANICI">
+      <Column Name="adı" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="şifre" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ÜYE" Member="ÜYEs">
+    <Type Name="ÜYE">
+      <Column Name="TCkimlikno" Type="System.String" DbType="NChar(11) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ÜyeNumarası" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ÜyeAdı" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ÜyeSoyadı" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Cinsiyeti" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="DoğumTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ÜyelikTarihi" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="TelefonNo" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
